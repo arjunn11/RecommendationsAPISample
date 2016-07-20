@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=A6AA17D0353A61CAAA95ADD5561E120A" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4CF1B132D11479A210C89A75D257BCD6" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Recommendations API</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Recommendations API</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Microsoft Azure, Recommendations<wbr />, Azure Machine Learning, Cortana Intelligence
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Recommendations<wbr />, Machine Learning, commerce, Retail
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Cloud
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/1/2016</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MS-LPL</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/Recommendations-API-Basic-d3e5f820">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p>This sample shows how to use the Recommendations API. You can find more details on the Recommendations API and other Cognitive Services at&nbsp;<a href="http://www.microsoft.com/cognitive-services/">www.microsoft.com/cognitive-services/</a>. &nbsp;</p>
+<p>The Recommendations API identifies consumption patterns from your transaction information in order to provide recommendations. These recommendations can help your customers more easily discover items that they may be interested in. &nbsp;By showing your
+ customers products that they are more likely to be interested in, you will, in turn, increase your sales.</p>
+<h2>Before you get started...</h2>
+<p>If you have not done so already, you will need to sign up for the Recommendations API service.</p>
+<ol>
+<li>
+<p>Go to the <strong>Azure Portal</strong> at <a href="http://portal.azure.com/">
+http://portal.azure.com/</a> and sign in with your Azure account.</p>
+</li><li>
+<p>Click on <strong>&#43; New</strong>.</p>
+</li><li>
+<p>Select the <strong>Intelligence</strong> option.</p>
+</li><li>
+<p>Select the <strong>Cognitive Services APIs</strong> product. This product will allow you to start a subscription for any of the cognitive services APIs (Face, Text Analytics, Computer Vision, etc.). Today we will focus on the Recommendations API.</p>
+</li><li>
+<p>Enter a <strong>Resource name</strong> for your Recommendations subscription. (For instace: &quot;MyRecommendations&quot;). This name should not have any spaces in it.</p>
+</li><li>
+<p>On <strong>API type</strong>, select <strong>Recommendations</strong>.</p>
+</li><li>
+<p>On <strong>Pricing tier</strong>, you can select a plan. You may select the <strong>
+Free</strong> tier for 10,000 transactions/month**. This is a free plan, so it is a good way to start trying the system. Once you go to production, we recommend you consider your request volume and change the plan type accordingly.</p>
+</li><li>
+<p>Select a <strong>Resource Group</strong>, or create a new one if you don't have one already.</p>
+</li><li>
+<p>You may change other elements in the Create dialog. We should point out that the resource provider today is only supported from United States data centers. Once you are done with any selections, click
+<strong>Create</strong>.</p>
+</li><li>
+<p>Wait a few minutes for the resource to be deployed. Once it is deployed, you can go to the
+<strong>Keys</strong> section in the <strong>Settings</strong> blade where you will be provided a primary and secondary key to use the API. Copy the primary key, as you'll need it when creating your first model.</p>
+</li></ol>
+<h2>Buiding the Sample</h2>
+<p>First of all, provide your API key to the application by passing it as command-line parameters.</p>
+<ol>
+<li>Right click on the solution and click on <strong>Properties</strong>. </li><li>On <strong>Properties</strong>, go to <strong>Debug</strong>, and then on <strong>
+Command line arguments</strong>&nbsp;enter the API key. You may choose to modify the code so this information is part of the code instead of reading from the command line.
+</li></ol>
+<h2>Description</h2>
+<p>The application will:</p>
+<p>1. Create a model container.</p>
+<p>2. Add catalog and usage data needed to train the model.</p>
+<p>3. Trigger a recommendation model build.</p>
+<p>4. Monitor the training process, and notify you when the build has completed.</p>
+<p>5. Use the newly created build to get recommendations.</p>
+<p>&nbsp;</p>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>SampleApp.cs - The main file that included the application code.</em> </li><li><em>RecommendationsApiWrapper.cs - A wrapper that makes it easy to consume the recommendations API from C#</em>
+</li><li><em>Helpers.cs - Helper file with classes to simplify serialization/deserialization of the RESTful API requests/responses.</em>
+</li><li>Catalog_Small.txt - Sample catalog file. You may replace with a your catalog.
+</li><li>Usage_Small.txt - Sample usage file. You may replace with a your usage files.
+</li></ul>
+<p>You may find more realistic data files at&nbsp;http://aka.ms/RecoSampleData&nbsp;</p>
+<h1>More Information</h1>
+<p>To learn more you can visit the complete <a href="http://go.microsoft.com/fwlink/?LinkId=759348">
+Recommendations API Reference</a> If you have questions, don't hesitate to contact us at
+<a href="https://code.msdn.microsoft.com/Recommendations-API-Basic-d3e5f820/mailto:mlapi@microsoft.com">mlapi@microsoft.com</a></p>
+<p><em><br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>
